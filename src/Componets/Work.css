@@ -1,0 +1,125 @@
+.image-section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between images */
+}
+
+.image-overlay-container {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.background-image {
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  filter: brightness(60%); /* Darken the image slightly */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better text visibility */
+}
+
+.text {
+  color: white;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.what-we-do-container {
+  text-align: center;
+  padding: 20px;
+  margin-top: -92px;
+}
+
+.what-we-do-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.what-we-do-title h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.line {
+  width: 80px;
+  height: 1px;
+  background-color: #000;
+}
+
+.what-we-do-subtitle {
+  color: #ff7a00; /* Orange color */
+  font-size: 18px;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .image-overlay-container {
+    height: 300px; /* Adjust height for tablets */
+  }
+
+  .background-image {
+    height: 100%;
+  }
+
+  .text {
+    font-size: 24px; /* Adjust font size for tablets */
+  }
+
+  .what-we-do-container {
+    text-align: center;
+    padding: 20px;
+    margin-top: -34px;
+  }
+  .what-we-do-title h2 {
+    font-size: 20px; /* Slightly smaller font size for tablets */
+  }
+
+  .what-we-do-subtitle {
+    font-size: 16px; /* Slightly smaller font size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-overlay-container {
+    height: 250px; /* Adjust height for mobile devices */
+  }
+
+  .background-image {
+    height: 100%;
+  }
+
+  .text {
+    font-size: 20px; /* Adjust font size for mobile devices */
+  }
+
+  .what-we-do-title h2 {
+    font-size: 18px; /* Smaller font size for mobile devices */
+  }
+
+  .what-we-do-subtitle {
+    font-size: 14px; /* Smaller font size for mobile devices */
+  }
+  .what-we-do-container {
+    text-align: center;
+    padding: 20px;
+    margin-top: -34px;
+  }
+
+  .what-we-do-container {
+    margin-top: 0; /* Remove margin top for mobile devices */
+  }
+}

@@ -1,0 +1,116 @@
+/* Navbar Styles */
+.navbar {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+/* Container for Navbar Content */
+.navbar-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-between;
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo Image */
+.gather-logo {
+  height: 50px;
+}
+
+/* Navbar Options */
+.navbar-options-container {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-options-container li {
+  color: #4c32a8;
+  font-size: 18px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.navbar-options-container li:hover {
+  border-bottom: 2px solid #4c32a8;
+}
+
+/* Links */
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+  display: none; /* Hidden by default for larger screens */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+  margin-left: auto; /* Push the hamburger menu to the far right */
+}
+
+.bar {
+  width: 37px;
+  height: 10px;
+  background-color: #4c32a8;
+  transition: 0.4s;
+  padding: 0px;
+  margin-right: -8px;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .hamburger-menu {
+    display: flex; /* Show hamburger menu on mobile */
+  }
+
+  .navbar-options-container {
+    display: none; /* Hidden by default */
+    justify-self: end;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: max-content;
+    background-color: white;
+    margin-right: 5%;
+    padding: 15px;
+    position: absolute; /* Overlay menu on top */
+    top: 100%; /* Positioned just below the navbar */
+    left: 0;
+    right: 0;
+    z-index: 100; /* Make sure it stays on top */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for a raised look */
+  }
+
+  .navbar-options-container.open {
+    display: flex; /* Show menu when "open" class is added */
+  }
+
+  .navbar-options-container li {
+    font-size: 16px;
+  }
+
+  .navbar-content {
+    flex-direction: row;
+    justify-content: space-between; /* Push the hamburger to the end on mobile */
+  }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 769px) {
+  .navbar-options-container {
+    display: flex; /* Show the menu in a row layout on larger screens */
+  }
+}
